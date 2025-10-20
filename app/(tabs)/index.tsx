@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
@@ -22,6 +22,14 @@ export default function HomeScreen() {
         <ThemedText type='title'>Welcome!</ThemedText>
         <HelloWave />
       </ThemedView>
+
+      {/* NativeWind 테스트 */}
+      <View className='bg-blue-500 p-4 m-4 rounded-lg'>
+        <Text className='text-white text-lg font-bold text-center'>NativeWind v4 테스트</Text>
+        <Text className='text-blue-100 text-sm text-center mt-2'>
+          이 텍스트가 파란색 배경에 흰색으로 보인다면 NativeWind가 정상 작동합니다!
+        </Text>
+      </View>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type='subtitle'>Step 1: Try it</ThemedText>
         <ThemedText>
