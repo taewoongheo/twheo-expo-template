@@ -6,6 +6,9 @@ module.exports = defineConfig([
   expoConfig,
   eslintPluginPrettierRecommended,
   {
+    languageOptions: {
+      globals: globals.node,
+    },
     ignores: ['dist/*', 'node_modules/*', '.expo/*'],
   },
 ]);

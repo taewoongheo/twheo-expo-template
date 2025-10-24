@@ -1,11 +1,7 @@
-import '@/global.css';
-import { Text, View } from 'react-native';
 import 'react-native-reanimated';
+import Index from '.';
+import '../global.css';
 
 export default function RootLayout() {
-  return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
-  );
+  return <Index />;
 }
