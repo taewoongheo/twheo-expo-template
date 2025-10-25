@@ -1,15 +1,12 @@
+import { getLocales } from 'expo-localization';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-
-import en from '@src/translations/en.json';
-import ko from '@src/translations/ko.json';
+import { resources } from './resources';
+import { getCurrentLanguage } from './utils';
 
 i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: en },
-    ko: { translation: ko },
-  },
-  lng: 'ko',
+  resources: resources,
+  lng: getCurrentLanguage() || getLocales()[0].languageCode || 'en',
   fallbackLng: 'en',
   compatibilityJSON: 'v3' as 'v4',
 

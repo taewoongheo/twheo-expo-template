@@ -7,6 +7,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   slug: 'twheo-expo-template',
   version: ClientEnv.VERSION,
   scheme: ClientEnv.SCHEME,
+  plugins: ['expo-localization'],
   ios: {
     ...config.ios,
     bundleIdentifier: 'com.taewoongheo.twheo-expo-template',
