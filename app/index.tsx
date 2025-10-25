@@ -7,8 +7,8 @@ function Index() {
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{ fontSize: 20, fontWeight: 'bold' }}>{Env.APP_ENV}</Text>
-      <Text style={{ fontSize: 20, fontWeight: 'bold' }}>{t('hello')}</Text>
+      <Text style={{ fontSize: 20, fontWeight: 'bold' }}>env: {Env.APP_ENV}</Text>
+      <Text style={{ fontSize: 20, fontWeight: 'bold' }}>lang: {t('hello')}</Text>
     </View>
   );
 }
