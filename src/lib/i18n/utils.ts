@@ -9,7 +9,7 @@ export const getCurrentLanguage = () => {
 };
 
 export const useLanguage = () => {
-  const [language, setLanguage] = useMMKVString('lang');
+  const [language, setLanguage] = useMMKVString('lang', storage);
 
   useEffect(() => {
     if (language) {
