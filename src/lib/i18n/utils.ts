@@ -1,15 +1,16 @@
-import { storage } from '@src/lib/storage';
 import i18n from 'i18next';
 import { useEffect } from 'react';
 import { useMMKVString } from 'react-native-mmkv';
-import { Language } from './resources';
+
+import { Language } from '@src/lib/i18n/resources';
+import { storage, STORAGE_KEYS } from '@src/lib/storage';
 
 export const getCurrentLanguage = () => {
-  return storage.getString('lang');
+  return storage.getString(STORAGE_KEYS.LANGUAGE);
 };
 
 export const useLanguage = () => {
-  const [language, setLanguage] = useMMKVString('lang', storage);
+  const [language, setLanguage] = useMMKVString(STORAGE_KEYS.LANGUAGE, storage);
 
   useEffect(() => {
     if (language) {

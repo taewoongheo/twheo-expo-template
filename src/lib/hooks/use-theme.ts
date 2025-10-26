@@ -1,7 +1,8 @@
 import { colorScheme, useColorScheme } from 'nativewind';
 import { useCallback, useEffect } from 'react';
 import { useMMKVString } from 'react-native-mmkv';
-import { storage } from '../storage';
+
+import { storage, STORAGE_KEYS } from '@src/lib/storage';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -9,7 +10,7 @@ const DEFAULT_THEME: Theme = 'system';
 
 export const useTheme = () => {
   const { colorScheme: _, setColorScheme } = useColorScheme();
-  const [selectedTheme, setSelectedTheme] = useMMKVString('theme', storage);
+  const [selectedTheme, setSelectedTheme] = useMMKVString(STORAGE_KEYS.THEME, storage);
 
   // This effect synchronizes the MMKV state (selectedTheme) with the NativeWind state (colorScheme)
   useEffect(() => {
@@ -33,6 +34,6 @@ export const useTheme = () => {
 };
 
 export const setInitialTheme = () => {
-  const theme = storage.getString('theme') as Theme | undefined;
+  const theme = storage.getString(STORAGE_KEYS.THEME) as Theme | undefined;
   colorScheme.set(theme ?? DEFAULT_THEME);
 };

@@ -1,8 +1,9 @@
 import { getLocales } from 'expo-localization';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { resources } from './resources';
-import { getCurrentLanguage } from './utils';
+
+import { resources } from '@src/lib/i18n/resources';
+import { getCurrentLanguage } from '@src/lib/i18n/utils';
 
 i18n.use(initReactI18next).init({
   resources: resources,
