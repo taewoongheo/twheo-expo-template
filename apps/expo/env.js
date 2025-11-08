@@ -10,9 +10,9 @@ console.log('loading env from:', envPath);
 
 dotenv.config({ path: envPath });
 
-const NAME = 'twheo expo template';
+const NAME = 'expo template';
 const VERSION = packageJson.version;
-const SCHEME = 'twheoexpotemplate';
+const SCHEME = 'expo-template';
 
 // define env schema
 const client = z.object({
