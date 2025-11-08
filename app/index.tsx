@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
+import { Text, View } from 'react-native';
+
 import { Env } from '@env';
+import Button from '@src/components/ui/button';
 import { useTheme } from '@src/lib/hooks';
 import { useLanguage } from '@src/lib/i18n/utils';
-import { useTranslation } from 'react-i18next';
-import { Button, Text, View } from 'react-native';
 
 function Index() {
   const { t } = useTranslation();
@@ -38,17 +40,14 @@ function Index() {
       >
         lang: {t('hello')}
       </Text>
-      <Button
-        title='Change Language'
-        onPress={() => setLanguage(language === 'en' ? 'ko' : 'en')}
-      />
+      <Button text='Change Language' onPress={() => setLanguage(language === 'en' ? 'ko' : 'en')} />
       <Text
         className='text-blue-900 dark:text-blue-100'
         style={{ fontSize: 20, fontWeight: 'bold' }}
       >
         Theme: {theme}
       </Text>
-      <Button title='Change Theme' onPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
+      <Button text='Change Theme' onPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
     </View>
   );
 }
