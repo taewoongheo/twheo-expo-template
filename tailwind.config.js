@@ -1,5 +1,5 @@
 const colors = require('./src/styles/colors');
-const semantics = require('./src/styles/semantics');
+const semantics = require('./src/styles/semantic');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

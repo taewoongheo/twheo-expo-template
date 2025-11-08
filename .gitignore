@@ -42,3 +42,11 @@ app-example
 # generated native folders
 /ios
 /android
+
+# yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/patches
+!.yarn/versions
+.pnp.*
