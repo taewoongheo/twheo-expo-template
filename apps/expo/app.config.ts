@@ -4,18 +4,18 @@ import { ClientEnv } from './env';
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: ClientEnv.NAME,
-  slug: 'expo-template',
+  slug: 'template-expo',
   version: ClientEnv.VERSION,
   scheme: ClientEnv.SCHEME,
   plugins: ['expo-localization'],
   ios: {
     ...config.ios,
-    bundleIdentifier: 'com.taewoongheo.expo-template',
+    bundleIdentifier: 'com.taewoongheo.template-expo',
     supportsTablet: true,
   },
   android: {
     ...config.android,
-    package: 'com.taewoongheo.expo-template',
+    package: 'com.taewoongheo.template-expo',
     adaptiveIcon: {
       backgroundColor: '#E6F4FE',
       foregroundImage: './assets/images/android-icon-foreground.png',

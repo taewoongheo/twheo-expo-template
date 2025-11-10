@@ -1,46 +1,107 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
-apps/expo/node_modules
-
-# Expo
-apps/expo/.expo/
-apps/expo/dist/
-apps/expo/web-build/
-apps/expo/expo-env.d.ts
-
-# Native
-.kotlin/
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-
-# Metro
-.metro-health-check*
-
-# debug
+# ====================
+# Common
+# ====================
+node_modules/
+.DS_Store
+*.pem
+*.tsbuildinfo
 npm-debug.*
 yarn-debug.*
 yarn-error.*
 
-# macOS
-.DS_Store
-*.pem
+# Yarn Berry (v4)
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
 
-# env files
-apps/expo/.env*
+# ====================
+# Expo App (apps/expo)
+# ====================
 
-# typescript
-*.tsbuildinfo
+# Dependencies
+apps/expo/node_modules
+apps/expo/.yarn/
 
+# Expo specific
+apps/expo/.expo/
+apps/expo/dist/
+apps/expo/web-build/
+apps/expo/expo-env.d.ts
 apps/expo/app-example
 
-# generated native folders
+# Environment files
+apps/expo/.env*
+
+# Generated native folders
 apps/expo/ios
 apps/expo/android
 
-# yarn
-apps/expo/.yarn/
+# Native build files (Expo specific)
+apps/expo/**/.kotlin/
+apps/expo/**/*.orig.*
+apps/expo/**/*.jks
+apps/expo/**/*.p8
+apps/expo/**/*.p12
+apps/expo/**/*.key
+apps/expo/**/*.mobileprovision
+
+# Android specific
+apps/expo/android/.gradle
+apps/expo/android/build
+apps/expo/android/app/build
+apps/expo/android/local.properties
+apps/expo/android/.cxx
+apps/expo/android/captures
+
+# iOS specific
+apps/expo/ios/Pods
+apps/expo/ios/build
+apps/expo/ios/**/*.xcworkspace
+!apps/expo/ios/**/*.xcworkspace/contents.xcworkspacedata
+apps/expo/ios/**/*.xcuserdata
+apps/expo/ios/**/*.xcuserdatad
+apps/expo/ios/DerivedData
+
+# Metro bundler
+.metro-health-check*
+
+# ====================
+# Web App (apps/web)
+# ====================
+
+# Dependencies
+apps/web/node_modules
+apps/web/.yarn/
+
+# Build output
+apps/web/dist
+apps/web/dist-ssr
+
+# Environment files
+apps/web/.env*
+!apps/web/.env.example
+
+# Vite cache
+apps/web/.vite
+
+# ====================
+# Packages (packages/*)
+# ====================
+
+# Dependencies
+packages/*/node_modules
+packages/*/.yarn/
+
+# Build output
+packages/*/dist
+packages/*/build
+packages/*/lib
+
+# Environment files
+packages/*/.env*

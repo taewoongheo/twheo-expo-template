@@ -10,9 +10,9 @@ console.log('loading env from:', envPath);
 
 dotenv.config({ path: envPath });
 
-const NAME = 'expo template';
+const NAME = 'template-expo';
 const VERSION = packageJson.version;
-const SCHEME = 'expo-template';
+const SCHEME = 'template-expo';
 
 // define env schema
 const client = z.object({
