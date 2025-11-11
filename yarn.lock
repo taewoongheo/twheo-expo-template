@@ -5259,6 +5259,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-config-custom@workspace:*, eslint-config-custom@workspace:packages/eslint-config-custom":
+  version: 0.0.0-use.local
+  resolution: "eslint-config-custom@workspace:packages/eslint-config-custom"
+  languageName: unknown
+  linkType: soft
+
 "eslint-config-expo@npm:~10.0.0":
   version: 10.0.0
   resolution: "eslint-config-expo@npm:10.0.0"
@@ -5467,7 +5473,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.24.0, eslint@npm:^9.25.0, eslint@npm:^9.39.1":
+"eslint@npm:^9.24.0, eslint@npm:^9.39.1":
   version: 9.39.1
   resolution: "eslint@npm:9.39.1"
   dependencies:
@@ -10867,6 +10873,17 @@ __metadata:
 "template-app@workspace:.":
   version: 0.0.0-use.local
   resolution: "template-app@workspace:."
+  dependencies:
+    "@eslint/js": "npm:^9.39.1"
+    "@types/node": "npm:^24.10.0"
+    eslint: "npm:^9.39.1"
+    eslint-config-prettier: "npm:^10.1.8"
+    eslint-plugin-prettier: "npm:^5.5.4"
+    eslint-plugin-react-refresh: "npm:^0.4.24"
+    globals: "npm:^16.5.0"
+    prettier: "npm:^3.6.2"
+    typescript: "npm:~5.9.3"
+    typescript-eslint: "npm:^8.46.3"
   languageName: unknown
   linkType: soft
 
@@ -10881,10 +10898,8 @@ __metadata:
     "@types/react": "npm:~19.1.0"
     cross-env: "npm:^10.1.0"
     dotenv: "npm:^17.2.3"
-    eslint: "npm:^9.25.0"
+    eslint-config-custom: "workspace:*"
     eslint-config-expo: "npm:~10.0.0"
-    eslint-config-prettier: "npm:^10.1.8"
-    eslint-plugin-prettier: "npm:^5.5.4"
     expo: "npm:~54.0.13"
     expo-constants: "npm:~18.0.9"
     expo-dev-client: "npm:~6.0.15"
@@ -10901,7 +10916,6 @@ __metadata:
     expo-web-browser: "npm:~15.0.8"
     i18next: "npm:^25.6.0"
     nativewind: "npm:^4.2.1"
-    prettier: "npm:^3.6.2"
     prettier-plugin-tailwindcss: "npm:^0.5.14"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
@@ -10918,7 +10932,6 @@ __metadata:
     tailwind-merge: "npm:^3.3.1"
     tailwind-variants: "npm:^3.1.1"
     tailwindcss: "npm:^3.4.18"
-    typescript: "npm:~5.9.2"
     zod: "npm:^3.25.76"
   languageName: unknown
   linkType: soft
@@ -10927,19 +10940,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "template-web@workspace:apps/web"
   dependencies:
-    "@eslint/js": "npm:^9.39.1"
-    "@types/node": "npm:^24.10.0"
     "@types/react": "npm:^19.2.2"
     "@types/react-dom": "npm:^19.2.2"
     "@vitejs/plugin-react": "npm:^5.1.0"
-    eslint: "npm:^9.39.1"
+    eslint-config-custom: "workspace:*"
     eslint-plugin-react-hooks: "npm:^5.2.0"
-    eslint-plugin-react-refresh: "npm:^0.4.24"
-    globals: "npm:^16.5.0"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
-    typescript: "npm:~5.9.3"
-    typescript-eslint: "npm:^8.46.3"
     vite: "npm:^7.2.2"
   languageName: unknown
   linkType: soft
@@ -11177,7 +11184,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~5.9.2, typescript@npm:~5.9.3":
+"typescript@npm:~5.9.3":
   version: 5.9.3
   resolution: "typescript@npm:5.9.3"
   bin:
@@ -11187,7 +11194,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A~5.9.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A~5.9.3#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A~5.9.3#optional!builtin<compat/typescript>":
   version: 5.9.3
   resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
   bin:

@@ -1,14 +1,19 @@
 const { defineConfig } = require('eslint/config');
 const expoConfig = require('eslint-config-expo/flat');
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
+const commonConfig = require('eslint-config-custom');
+const globals = require('globals');
 
 module.exports = defineConfig([
   expoConfig,
-  eslintPluginPrettierRecommended,
   {
     languageOptions: {
       globals: globals.node,
+
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+      },
     },
     ignores: ['dist/*', 'node_modules/*', '.expo/*'],
   },
+  ...commonConfig,
 ]);

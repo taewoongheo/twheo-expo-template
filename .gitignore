@@ -12,7 +12,7 @@ yarn-debug.*
 yarn-error.*
 
 # Yarn Berry (v4)
-.yarn/*
+.yarn
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
