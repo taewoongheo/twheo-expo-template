@@ -1,4 +1,4 @@
-import i18n from 'i18next';
+import { changeLanguage } from 'i18next';
 import { useEffect } from 'react';
 import { useMMKVString } from 'react-native-mmkv';
 
@@ -14,9 +14,9 @@ export const useLanguage = () => {
 
   useEffect(() => {
     if (language) {
-      i18n.changeLanguage(language);
+      changeLanguage(language);
     }
-  }, [language, i18n]);
+  }, [language]);
 
   return {
     language: language as Language,

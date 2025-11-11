@@ -10,7 +10,26 @@ module.exports = [
   reactRefresh.configs.recommended,
   {
     rules: {
-      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+    },
+  },
+  {
+    files: ['env.js', '*.config.js'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
+  {
+    files: ['**/index.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
     },
   },
 ];

@@ -1,7 +1,7 @@
 import { Pressable, PressableProps, Text } from 'react-native';
 import { tv } from 'tailwind-variants';
 
-export const button = tv({
+const button = tv({
   slots: {
     container: 'my-2 flex flex-row items-center justify-center rounded-md px-4',
     label: 'font-inter text-base font-semibold',
