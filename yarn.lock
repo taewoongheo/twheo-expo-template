@@ -10882,6 +10882,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.24"
     globals: "npm:^16.5.0"
     prettier: "npm:^3.6.2"
+    prettier-plugin-tailwindcss: "npm:^0.5.14"
     typescript: "npm:~5.9.3"
     typescript-eslint: "npm:^8.46.3"
   languageName: unknown
@@ -10916,7 +10917,6 @@ __metadata:
     expo-web-browser: "npm:~15.0.8"
     i18next: "npm:^25.6.0"
     nativewind: "npm:^4.2.1"
-    prettier-plugin-tailwindcss: "npm:^0.5.14"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
     react-i18next: "npm:^16.2.0"
