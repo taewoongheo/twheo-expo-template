@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-config-custom",
+  "name": "tailwind-design-tokens",
   "private": true,
   "main": "index.js",
   "types": "index.d.ts"
