@@ -10,6 +10,9 @@
     },
     {
       "path": "./apps/expo/tsconfig.json"
+    },
+    {
+      "path": "./packages/tailwind-config-custom/tsconfig.json"
     }
   ]
 }

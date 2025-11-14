@@ -1,0 +1,6 @@
+{
+  "name": "tailwind-config-custom",
+  "private": true,
+  "main": "index.js",
+  "types": "index.d.ts"
+}

@@ -58,7 +58,8 @@
     "@types/react": "~19.1.0",
     "cross-env": "^10.1.0",
     "eslint-config-custom": "workspace:*",
-    "eslint-config-expo": "~10.0.0"
+    "eslint-config-expo": "~10.0.0",
+    "tailwind-config-custom": "workspace:*"
   },
   "private": true,
   "packageManager": "yarn@4.11.0"
