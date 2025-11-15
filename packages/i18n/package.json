@@ -1,5 +1,5 @@
 {
-  "name": "@twheo/tailwind-design-tokens",
+  "name": "@twheo/i18n",
   "private": true,
   "main": "index.js",
   "types": "index.d.ts"

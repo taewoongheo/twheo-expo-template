@@ -1,4 +1,4 @@
-import commonConfig from 'eslint-config-custom';
+import commonConfig from '@twheo/eslint-config-custom';
 import reactHooks from 'eslint-plugin-react-hooks';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';

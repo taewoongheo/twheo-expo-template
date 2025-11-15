@@ -3,8 +3,8 @@ module.exports = {
   content: ['./app/**/*.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
   presets: [
     require('nativewind/preset'),
-    require('tailwind-design-tokens'),
-    require('tailwind-semantic-tokens'),
+    require('@twheo/tailwind-design-tokens'),
+    require('@twheo/tailwind-semantic-tokens'),
   ],
   darkMode: 'class',
   theme: {

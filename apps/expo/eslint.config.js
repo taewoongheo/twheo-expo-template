@@ -1,6 +1,6 @@
 const { defineConfig } = require('eslint/config');
 const expoConfig = require('eslint-config-expo/flat');
-const commonConfig = require('eslint-config-custom');
+const commonConfig = require('@twheo/eslint-config-custom');
 const globals = require('globals');
 
 module.exports = defineConfig([

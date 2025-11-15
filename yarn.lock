@@ -3073,6 +3073,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@twheo/eslint-config-custom@workspace:*, @twheo/eslint-config-custom@workspace:packages/eslint-config-custom":
+  version: 0.0.0-use.local
+  resolution: "@twheo/eslint-config-custom@workspace:packages/eslint-config-custom"
+  languageName: unknown
+  linkType: soft
+
+"@twheo/i18n@workspace:packages/i18n":
+  version: 0.0.0-use.local
+  resolution: "@twheo/i18n@workspace:packages/i18n"
+  languageName: unknown
+  linkType: soft
+
+"@twheo/tailwind-design-tokens@workspace:*, @twheo/tailwind-design-tokens@workspace:packages/tailwind-design-tokens":
+  version: 0.0.0-use.local
+  resolution: "@twheo/tailwind-design-tokens@workspace:packages/tailwind-design-tokens"
+  languageName: unknown
+  linkType: soft
+
+"@twheo/tailwind-semantic-tokens@workspace:*, @twheo/tailwind-semantic-tokens@workspace:packages/tailwind-semantic-tokens":
+  version: 0.0.0-use.local
+  resolution: "@twheo/tailwind-semantic-tokens@workspace:packages/tailwind-semantic-tokens"
+  dependencies:
+    "@twheo/tailwind-design-tokens": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
 "@tybys/wasm-util@npm:^0.10.0":
   version: 0.10.1
   resolution: "@tybys/wasm-util@npm:0.10.1"
@@ -5307,12 +5333,6 @@ __metadata:
   checksum: 10c0/9497d4dd307d845bd7f75180d8188bb17ea8c151c1edbf6b6717c100e104d629dc2dfb687686181b0f4b7d732c7dfdc4d5e7a8ff72de1b0ca283a75bbb3a9cd9
   languageName: node
   linkType: hard
-
-"eslint-config-custom@workspace:*, eslint-config-custom@workspace:packages/eslint-config-custom":
-  version: 0.0.0-use.local
-  resolution: "eslint-config-custom@workspace:packages/eslint-config-custom"
-  languageName: unknown
-  linkType: soft
 
 "eslint-config-expo@npm:~10.0.0":
   version: 10.0.0
@@ -10860,26 +10880,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-design-tokens@workspace:*, tailwind-design-tokens@workspace:packages/tailwind-design-tokens":
-  version: 0.0.0-use.local
-  resolution: "tailwind-design-tokens@workspace:packages/tailwind-design-tokens"
-  languageName: unknown
-  linkType: soft
-
 "tailwind-merge@npm:^3.3.1":
   version: 3.4.0
   resolution: "tailwind-merge@npm:3.4.0"
   checksum: 10c0/eaf17bb695c51c7bb7a90366a9c62be295473ee97fcfd1da54287714d4a5788a88ff4ad1ab9e0128638257fda777d6c9ea88682e36195e31a7fa2cf43f45e310
   languageName: node
   linkType: hard
-
-"tailwind-semantic-tokens@workspace:*, tailwind-semantic-tokens@workspace:packages/tailwind-semantic-tokens":
-  version: 0.0.0-use.local
-  resolution: "tailwind-semantic-tokens@workspace:packages/tailwind-semantic-tokens"
-  dependencies:
-    tailwind-design-tokens: "workspace:*"
-  languageName: unknown
-  linkType: soft
 
 "tailwind-variants@npm:^3.1.1":
   version: 3.1.1
@@ -10973,10 +10979,12 @@ __metadata:
     "@react-navigation/bottom-tabs": "npm:^7.4.0"
     "@react-navigation/elements": "npm:^2.6.3"
     "@react-navigation/native": "npm:^7.1.8"
+    "@twheo/eslint-config-custom": "workspace:*"
+    "@twheo/tailwind-design-tokens": "workspace:*"
+    "@twheo/tailwind-semantic-tokens": "workspace:*"
     "@types/react": "npm:~19.1.0"
     cross-env: "npm:^10.1.0"
     dotenv: "npm:^17.2.3"
-    eslint-config-custom: "workspace:*"
     eslint-config-expo: "npm:~10.0.0"
     expo: "npm:~54.0.13"
     expo-constants: "npm:~18.0.9"
@@ -11006,9 +11014,7 @@ __metadata:
     react-native-screens: "npm:~4.16.0"
     react-native-web: "npm:~0.21.0"
     react-native-worklets: "npm:^0.5.1"
-    tailwind-design-tokens: "workspace:*"
     tailwind-merge: "npm:^3.3.1"
-    tailwind-semantic-tokens: "workspace:*"
     tailwind-variants: "npm:^3.1.1"
     tailwindcss: "npm:^3.4.18"
     zod: "npm:^3.25.76"
@@ -11019,17 +11025,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "template-web@workspace:apps/web"
   dependencies:
+    "@twheo/eslint-config-custom": "workspace:*"
+    "@twheo/tailwind-design-tokens": "workspace:*"
+    "@twheo/tailwind-semantic-tokens": "workspace:*"
     "@types/react": "npm:^19.2.2"
     "@types/react-dom": "npm:^19.2.2"
     "@vitejs/plugin-react": "npm:^5.1.0"
     autoprefixer: "npm:^10.4.22"
-    eslint-config-custom: "workspace:*"
     eslint-plugin-react-hooks: "npm:^5.2.0"
     postcss: "npm:^8.5.6"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
-    tailwind-design-tokens: "workspace:*"
-    tailwind-semantic-tokens: "workspace:*"
     tailwindcss: "npm:3"
     vite: "npm:^7.2.2"
   languageName: unknown

@@ -16,15 +16,15 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@twheo/eslint-config-custom": "workspace:*",
+    "@twheo/tailwind-design-tokens": "workspace:*",
+    "@twheo/tailwind-semantic-tokens": "workspace:*",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.0",
     "autoprefixer": "^10.4.22",
-    "eslint-config-custom": "workspace:*",
     "eslint-plugin-react-hooks": "^5.2.0",
     "postcss": "^8.5.6",
-    "tailwind-design-tokens": "workspace:*",
-    "tailwind-semantic-tokens": "workspace:*",
     "tailwindcss": "3",
     "vite": "^7.2.2"
   }

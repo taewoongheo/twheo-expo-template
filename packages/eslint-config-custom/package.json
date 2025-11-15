@@ -1,5 +1,5 @@
 {
-    "name": "eslint-config-custom",
-    "private": true,
-    "main": "index.js"
+  "name": "@twheo/eslint-config-custom",
+  "private": true,
+  "main": "index.js"
 }

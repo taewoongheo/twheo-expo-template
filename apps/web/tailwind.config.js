@@ -1,5 +1,5 @@
-import tailwindDesignTokens from 'tailwind-design-tokens';
-import tailwindSemanticTokens from 'tailwind-semantic-tokens';
+import tailwindDesignTokens from '@twheo/tailwind-design-tokens';
+import tailwindSemanticTokens from '@twheo/tailwind-semantic-tokens';
 
 /** @type {import('tailwindcss').Config} */
 export default {
