@@ -59,7 +59,8 @@
     "cross-env": "^10.1.0",
     "eslint-config-custom": "workspace:*",
     "eslint-config-expo": "~10.0.0",
-    "tailwind-config-custom": "workspace:*"
+    "tailwind-design-tokens": "workspace:*",
+    "tailwind-semantic-tokens": "workspace:*"
   },
   "private": true,
   "packageManager": "yarn@4.11.0"

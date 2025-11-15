@@ -10860,9 +10860,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-config-custom@workspace:*, tailwind-config-custom@workspace:packages/tailwind-config-custom":
+"tailwind-design-tokens@workspace:*, tailwind-design-tokens@workspace:packages/tailwind-design-tokens":
   version: 0.0.0-use.local
-  resolution: "tailwind-config-custom@workspace:packages/tailwind-config-custom"
+  resolution: "tailwind-design-tokens@workspace:packages/tailwind-design-tokens"
   languageName: unknown
   linkType: soft
 
@@ -10872,6 +10872,14 @@ __metadata:
   checksum: 10c0/eaf17bb695c51c7bb7a90366a9c62be295473ee97fcfd1da54287714d4a5788a88ff4ad1ab9e0128638257fda777d6c9ea88682e36195e31a7fa2cf43f45e310
   languageName: node
   linkType: hard
+
+"tailwind-semantic-tokens@workspace:*, tailwind-semantic-tokens@workspace:packages/tailwind-semantic-tokens":
+  version: 0.0.0-use.local
+  resolution: "tailwind-semantic-tokens@workspace:packages/tailwind-semantic-tokens"
+  dependencies:
+    tailwind-design-tokens: "workspace:*"
+  languageName: unknown
+  linkType: soft
 
 "tailwind-variants@npm:^3.1.1":
   version: 3.1.1
@@ -10998,8 +11006,9 @@ __metadata:
     react-native-screens: "npm:~4.16.0"
     react-native-web: "npm:~0.21.0"
     react-native-worklets: "npm:^0.5.1"
-    tailwind-config-custom: "workspace:*"
+    tailwind-design-tokens: "workspace:*"
     tailwind-merge: "npm:^3.3.1"
+    tailwind-semantic-tokens: "workspace:*"
     tailwind-variants: "npm:^3.1.1"
     tailwindcss: "npm:^3.4.18"
     zod: "npm:^3.25.76"
@@ -11019,7 +11028,8 @@ __metadata:
     postcss: "npm:^8.5.6"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
-    tailwind-config-custom: "workspace:*"
+    tailwind-design-tokens: "workspace:*"
+    tailwind-semantic-tokens: "workspace:*"
     tailwindcss: "npm:3"
     vite: "npm:^7.2.2"
   languageName: unknown

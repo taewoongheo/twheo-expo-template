@@ -49,6 +49,7 @@ function Index() {
       </Text>
       <Button text='Change Theme' onPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
       <Text className='text-warning-500 dark:text-warning-500'>Warning Message</Text>
+      <Text className='text-brand-primary-light dark:text-brand-primary-dark'>Brand Color</Text>
     </View>
   );
 }

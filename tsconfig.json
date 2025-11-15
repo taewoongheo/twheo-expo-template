@@ -12,7 +12,10 @@
       "path": "./apps/expo/tsconfig.json"
     },
     {
-      "path": "./packages/tailwind-config-custom/tsconfig.json"
+      "path": "./packages/tailwind-design-tokens/tsconfig.json"
+    },
+    {
+      "path": "./packages/tailwind-semantic-tokens/tsconfig.json"
     }
   ]
 }
