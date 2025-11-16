@@ -3079,9 +3079,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@twheo/i18n@workspace:packages/i18n":
+"@twheo/i18n@workspace:*, @twheo/i18n@workspace:packages/i18n":
   version: 0.0.0-use.local
   resolution: "@twheo/i18n@workspace:packages/i18n"
+  dependencies:
+    expo-localization: "npm:~17.0.7"
+    i18next: "npm:^25.6.0"
+    react-i18next: "npm:^16.2.0"
   languageName: unknown
   linkType: soft
 
@@ -10963,9 +10967,12 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-prettier: "npm:^5.5.4"
     eslint-plugin-react-refresh: "npm:^0.4.24"
+    expo-localization: "npm:~17.0.7"
     globals: "npm:^16.5.0"
+    i18next: "npm:^25.6.0"
     prettier: "npm:^3.6.2"
     prettier-plugin-tailwindcss: "npm:^0.5.14"
+    react-i18next: "npm:^16.2.0"
     typescript: "npm:~5.9.3"
     typescript-eslint: "npm:^8.46.3"
   languageName: unknown
@@ -10980,6 +10987,7 @@ __metadata:
     "@react-navigation/elements": "npm:^2.6.3"
     "@react-navigation/native": "npm:^7.1.8"
     "@twheo/eslint-config-custom": "workspace:*"
+    "@twheo/i18n": "workspace:*"
     "@twheo/tailwind-design-tokens": "workspace:*"
     "@twheo/tailwind-semantic-tokens": "workspace:*"
     "@types/react": "npm:~19.1.0"
@@ -11026,6 +11034,7 @@ __metadata:
   resolution: "template-web@workspace:apps/web"
   dependencies:
     "@twheo/eslint-config-custom": "workspace:*"
+    "@twheo/i18n": "workspace:*"
     "@twheo/tailwind-design-tokens": "workspace:*"
     "@twheo/tailwind-semantic-tokens": "workspace:*"
     "@types/react": "npm:^19.2.2"
@@ -11033,9 +11042,11 @@ __metadata:
     "@vitejs/plugin-react": "npm:^5.1.0"
     autoprefixer: "npm:^10.4.22"
     eslint-plugin-react-hooks: "npm:^5.2.0"
+    i18next: "npm:^25.6.0"
     postcss: "npm:^8.5.6"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
+    react-i18next: "npm:^16.2.0"
     tailwindcss: "npm:3"
     vite: "npm:^7.2.2"
   languageName: unknown

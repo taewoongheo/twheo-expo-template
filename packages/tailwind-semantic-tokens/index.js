@@ -1,4 +1,4 @@
-const { colors } = require('tailwind-design-tokens');
+const { colors } = require('@twheo/tailwind-design-tokens');
 
 // NOTE: Cache must be cleared if any color token values are modified
 /** @type {import('tailwindcss').Config} */

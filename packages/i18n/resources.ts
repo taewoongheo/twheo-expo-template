@@ -1,5 +1,5 @@
-import en from '@src/translations/en.json';
-import ko from '@src/translations/ko.json';
+import en from './translations/en.json';
+import ko from './translations/ko.json';
 
 export const resources = {
   en: { translation: en },
