@@ -1,0 +1,10 @@
+{
+  "name": "@twheo/common-components",
+  "private": true,
+  "main": "index.tsx",
+  "types": "index.d.ts",
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-native": ">=0.80.0"
+  }
+}

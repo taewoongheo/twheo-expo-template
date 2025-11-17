@@ -1,3 +1,4 @@
+import { Button } from '@twheo/common-components';
 import { changeLanguage } from 'i18next';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -31,6 +32,7 @@ function App() {
       <p className='text-brand-primary-light dark:text-brand-primary-dark'>Brand Color</p>
       <p>{t('hello')}</p>
       <button onClick={() => changeLanguage('en')}>Change Language</button>
+      <Button>Common Button</Button>
     </>
   );
 }

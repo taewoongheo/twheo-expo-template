@@ -19,5 +19,5 @@
     }
   },
   "include": ["**/*.js", "**/*.ts", "**/*.tsx", "nativewind-env.d.ts"],
-  "exclude": ["node_modules", "babel.config.js"]
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
 }

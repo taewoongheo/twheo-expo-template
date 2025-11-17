@@ -12,11 +12,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@twheo/common-components": "workspace:*",
     "@twheo/i18n": "workspace:*",
     "i18next": "^25.6.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-i18next": "^16.2.0"
+    "react-i18next": "^16.2.0",
+    "react-native-web": "^0.21.2"
   },
   "devDependencies": {
     "@twheo/eslint-config-custom": "workspace:*",
@@ -24,6 +26,7 @@
     "@twheo/tailwind-semantic-tokens": "workspace:*",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "@types/react-native-web": "^0",
     "@vitejs/plugin-react": "^5.1.0",
     "autoprefixer": "^10.4.22",
     "eslint-plugin-react-hooks": "^5.2.0",

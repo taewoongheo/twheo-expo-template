@@ -12,6 +12,12 @@
       "path": "./apps/expo/tsconfig.json"
     },
     {
+      "path": "./packages/common-components/tsconfig.json"
+    },
+    {
+      "path": "./packages/i18n/tsconfig.json"
+    },
+    {
       "path": "./packages/tailwind-design-tokens/tsconfig.json"
     },
     {

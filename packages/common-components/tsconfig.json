@@ -4,8 +4,11 @@
     "composite": true,
     "allowJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node"
   },
-  "include": ["index.js"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["**/*.d.ts"]
 }

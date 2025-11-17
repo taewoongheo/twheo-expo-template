@@ -1,10 +1,10 @@
-import { useTranslation } from 'react-i18next';
-import { Text, View } from 'react-native';
-
 import { Env } from '@env';
 import Button from '@src/components/ui/button';
 import { useTheme } from '@src/lib/hooks';
 import { useLanguage } from '@src/lib/i18n/utils';
+import { Button as CommonButton } from '@twheo/common-components';
+import { useTranslation } from 'react-i18next';
+import { Text, View } from 'react-native';
 
 function Index() {
   const { t } = useTranslation();
@@ -50,6 +50,7 @@ function Index() {
       <Button text='Change Theme' onPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
       <Text className='text-warning-500 dark:text-warning-500'>Warning Message</Text>
       <Text className='text-brand-primary-light dark:text-brand-primary-dark'>Brand Color</Text>
+      <CommonButton>Common Button</CommonButton>
     </View>
   );
 }
