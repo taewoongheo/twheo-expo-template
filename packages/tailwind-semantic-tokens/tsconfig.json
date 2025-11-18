@@ -4,8 +4,8 @@
     "composite": true,
     "allowJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true
   },
-  "include": ["index.js"],
-  "exclude": ["**/*.d.ts"]
+  "include": ["index.js"]
 }

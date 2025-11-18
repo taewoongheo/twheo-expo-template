@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./app/**/*.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './app/**/*.{js,jsx,ts,tsx}',
+    './src/**/*.{js,jsx,ts,tsx}',
+    '../../packages/ui/**/*.{js,jsx,ts,tsx}',
+  ],
   presets: [
     require('nativewind/preset'),
     require('@twheo/tailwind-design-tokens'),

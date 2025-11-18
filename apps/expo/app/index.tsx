@@ -2,7 +2,7 @@ import { Env } from '@env';
 import Button from '@src/components/ui/button';
 import { useTheme } from '@src/lib/hooks';
 import { useLanguage } from '@src/lib/i18n/utils';
-import { Button as CommonButton } from '@twheo/common-components';
+import { Button as CommonButton } from '@twheo/ui';
 import { useTranslation } from 'react-i18next';
 import { Text, View } from 'react-native';
 

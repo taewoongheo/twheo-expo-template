@@ -1,4 +1,4 @@
-import { Button } from '@twheo/common-components';
+import { Button } from '@twheo/ui';
 import { changeLanguage } from 'i18next';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

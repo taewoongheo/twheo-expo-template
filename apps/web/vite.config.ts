@@ -1,14 +1,25 @@
 import react from '@vitejs/plugin-react';
+import path from 'path';
 import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      jsxImportSource: 'nativewind',
+    }),
+  ],
   resolve: {
-    alias: {
-      'react-native': 'react-native-web',
-    },
-    dedupe: ['react', 'react-dom'],
+    alias: [
+      {
+        find: 'react-native/Libraries/Utilities/codegenNativeComponent',
+        replacement: path.resolve(__dirname, './src/shim.js'),
+      },
+      {
+        find: 'react-native',
+        replacement: 'react-native-web',
+      },
+    ],
+    dedupe: ['react', 'react-dom', 'react-native-web'],
     extensions: [
       '.web.tsx',
       '.web.ts',

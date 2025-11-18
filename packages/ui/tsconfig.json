@@ -9,6 +9,5 @@
     "jsx": "react-jsx",
     "moduleResolution": "node"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["**/*.d.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "app-env.d.ts"]
 }

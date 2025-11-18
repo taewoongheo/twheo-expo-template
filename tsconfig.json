@@ -12,7 +12,7 @@
       "path": "./apps/expo/tsconfig.json"
     },
     {
-      "path": "./packages/common-components/tsconfig.json"
+      "path": "./packages/ui/tsconfig.json"
     },
     {
       "path": "./packages/i18n/tsconfig.json"
