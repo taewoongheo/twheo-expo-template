@@ -3,6 +3,13 @@
   "private": true,
   "main": "index.tsx",
   "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./index.tsx",
+      "import": "./index.tsx",
+      "default": "./index.tsx"
+    }
+  },
   "peerDependencies": {
     "nativewind": "^4.2.1",
     "react": ">=19.0.0",

@@ -2,5 +2,17 @@
   "name": "@twheo/tailwind-design-tokens",
   "private": true,
   "main": "index.js",
-  "types": "index.d.ts"
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./colors": {
+      "require": "./colors.js",
+      "import": "./colors.js",
+      "default": "./colors.js"
+    }
+  }
 }
