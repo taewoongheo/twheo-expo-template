@@ -1,13 +1,17 @@
-const colors = require('./colors');
+import colors from './colors.js';
+import spacing from './spacing.js';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   theme: {
     extend: {
       colors,
+      spacing,
     },
   },
 };
 
-// Export colors separately for semantic tokens
-module.exports.colors = colors;
+export default config;
+
+// Export separately for semantic tokens or direct usage
+export { colors, spacing };

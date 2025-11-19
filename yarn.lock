@@ -3228,6 +3228,8 @@ __metadata:
 "@twheo/ui@workspace:*, @twheo/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@twheo/ui@workspace:packages/ui"
+  dependencies:
+    "@twheo/tailwind-design-tokens": "workspace:*"
   peerDependencies:
     nativewind: ^4.2.1
     react: ">=19.0.0"

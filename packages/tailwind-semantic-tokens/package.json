@@ -1,6 +1,7 @@
 {
   "name": "@twheo/tailwind-semantic-tokens",
   "private": true,
+  "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
   "exports": {

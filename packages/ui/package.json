@@ -10,6 +10,9 @@
       "default": "./index.tsx"
     }
   },
+  "dependencies": {
+    "@twheo/tailwind-design-tokens": "workspace:*"
+  },
   "peerDependencies": {
     "nativewind": "^4.2.1",
     "react": ">=19.0.0",

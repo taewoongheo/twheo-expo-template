@@ -1,6 +1,7 @@
 {
   "name": "@twheo/tailwind-design-tokens",
   "private": true,
+  "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
   "exports": {
@@ -13,6 +14,11 @@
       "require": "./colors.js",
       "import": "./colors.js",
       "default": "./colors.js"
+    },
+    "./spacing": {
+      "require": "./spacing.js",
+      "import": "./spacing.js",
+      "default": "./spacing.js"
     }
   }
 }

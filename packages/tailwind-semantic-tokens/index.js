@@ -1,8 +1,8 @@
-const colors = require('@twheo/tailwind-design-tokens/colors');
+import colors from '@twheo/tailwind-design-tokens/colors';
 
 // NOTE: Cache must be cleared if any color token values are modified
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   theme: {
     extend: {
       colors: {
