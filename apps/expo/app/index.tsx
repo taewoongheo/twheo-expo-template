@@ -1,8 +1,7 @@
 import { Env } from '@env';
-import Button from '@src/components/ui/button';
 import { useTheme } from '@src/lib/hooks';
 import { useLanguage } from '@src/lib/i18n/utils';
-import { Button as CommonButton } from '@twheo/ui';
+import { Button } from '@twheo/ui';
 import { useTranslation } from 'react-i18next';
 import { Text, View } from 'react-native';
 
@@ -40,17 +39,88 @@ function Index() {
       >
         lang: {t('hello')}
       </Text>
-      <Button text='Change Language' onPress={() => setLanguage(language === 'en' ? 'ko' : 'en')} />
+      <Button
+        text='Change Language'
+        onPress={() => setLanguage(language === 'en' ? 'ko' : 'en')}
+        isLoading={false}
+        color='primary'
+        size='default'
+        fullWidth={false}
+        disabled={false}
+      />
       <Text
         className='text-blue-900 dark:text-blue-100'
         style={{ fontSize: 20, fontWeight: 'bold' }}
       >
         Theme: {theme}
       </Text>
-      <Button text='Change Theme' onPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
+      <Button
+        text='Change Theme'
+        onPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        isLoading={false}
+        color='primary'
+        size='default'
+        fullWidth={false}
+        disabled={false}
+      />
       <Text className='text-warning-500 dark:text-warning-500'>Warning Message</Text>
       <Text className='text-brand-primary-light dark:text-brand-primary-dark'>Brand Color</Text>
-      <CommonButton>Common Button</CommonButton>
+      <Button
+        isLoading={false}
+        color='primary'
+        size='default'
+        fullWidth={false}
+        disabled={false}
+        text='Common Button'
+      />
+      <Button
+        isLoading={false}
+        color='primary'
+        size='sm'
+        fullWidth={false}
+        disabled={false}
+        text='Small Button'
+      />
+      <Button
+        isLoading={false}
+        color='primary'
+        size='lg'
+        fullWidth={false}
+        disabled={false}
+        text='Large Button'
+      />
+      <Button
+        isLoading={false}
+        color='secondary'
+        size='default'
+        fullWidth={false}
+        disabled={false}
+        text='Secondary Button'
+      />
+      <Button
+        isLoading={false}
+        color='destructive'
+        size='default'
+        fullWidth={false}
+        disabled={false}
+        text='Destructive Button'
+      />
+      <Button
+        isLoading={false}
+        color='link'
+        size='default'
+        fullWidth={true}
+        disabled={false}
+        text='Link Button'
+      />
+      <Button
+        isLoading={false}
+        color='primary'
+        size='icon'
+        fullWidth={false}
+        disabled={false}
+        text='ICON'
+      />
     </View>
   );
 }

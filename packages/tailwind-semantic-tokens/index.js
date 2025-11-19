@@ -7,24 +7,24 @@ export default {
     extend: {
       colors: {
         brand: {
-          'primary-light': colors.primary[200],
-          'primary-dark': colors.primary[800],
+          'primary-light': colors.primary[300],
+          'primary-dark': colors.primary[700],
+          'secondary-light': colors.primary[200],
+          'secondary-dark': colors.primary[800],
         },
         background: {
-          'primary-light': colors.charcoal[200],
-          'primary-dark': colors.charcoal[800],
-          'secondary-light': colors.charcoal[300],
-          'secondary-dark': colors.charcoal[700],
-          'destructive-light': colors.danger[400],
-          'destructive-dark': colors.danger[600],
+          'primary-light': colors.primary[300],
+          'primary-dark': colors.primary[700],
+          'secondary-light': colors.primary[200],
+          'secondary-dark': colors.primary[800],
+          'destructive-light': colors.danger[500],
+          'destructive-dark': colors.danger[400],
         },
         text: {
           'primary-light': colors.neutral[800],
           'primary-dark': colors.neutral[200],
-        },
-        destructive: {
-          'primary-light': colors.danger[200],
-          'primary-dark': colors.danger[800],
+          'secondary-light': colors.neutral[600],
+          'secondary-dark': colors.neutral[400],
         },
         border: {
           'primary-light': colors.charcoal[300],
