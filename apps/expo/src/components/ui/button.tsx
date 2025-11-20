@@ -1,74 +1,108 @@
-import { Pressable, PressableProps, Text } from 'react-native';
+import type { PressableProps } from 'react-native';
+import { ActivityIndicator, Pressable, Text } from 'react-native';
 import { tv } from 'tailwind-variants';
 
 const button = tv({
   slots: {
-    container: 'my-2 flex flex-row items-center justify-center rounded-md px-4',
-    label: 'font-inter text-base font-semibold',
+    container: 'flex flex-row items-center justify-center rounded-md px-4 py-2',
+    label: 'font-semibold',
     indicator: 'h-6 text-white',
   },
-
   variants: {
-    variant: {
-      default: {
-        container: 'bg-black dark:bg-white',
-        label: 'text-white dark:text-black',
-        indicator: 'text-white dark:text-black',
+    color: {
+      primary: {
+        container: 'bg-background-primary-light dark:bg-background-primary-dark',
+        label: 'text-text-primary-light dark:text-text-primary-dark',
+        indicator: 'text-text-primary-light dark:text-text-primary-dark',
       },
-      secondary: {},
-      outline: {},
-      destructive: {},
-      ghost: {},
-      link: {},
+      secondary: {
+        container: 'bg-background-secondary-light dark:bg-background-secondary-dark',
+        label: 'text-text-secondary-light dark:text-text-secondary-dark',
+        indicator: 'text-text-secondary-light dark:text-text-secondary-dark',
+      },
+      destructive: {
+        container: 'bg-background-destructive-light dark:bg-background-destructive-dark',
+        label: 'text-text-primary-light dark:text-text-primary-dark',
+        indicator: 'text-text-primary-light dark:text-text-primary-dark',
+      },
+      link: {
+        container: 'bg-transparent',
+        label: 'text-text-primary-light dark:text-text-primary-dark underline',
+        indicator: 'text-text-primary-light dark:text-text-primary-dark',
+      },
     },
     size: {
-      default: {},
-      sm: {},
-      lg: {},
-      icon: {},
+      default: {
+        container: 'h-10 px-4',
+        label: 'text-base',
+      },
+      sm: {
+        container: 'h-8 px-3',
+        label: 'text-sm',
+      },
+      lg: {
+        container: 'h-12 px-8',
+        label: 'text-lg',
+      },
+      icon: {
+        container: 'size-9',
+      },
     },
     disabled: {
-      true: {},
+      true: {
+        container: 'opacity-40',
+      },
     },
     fullWidth: {
-      true: {},
-      false: {},
+      true: {
+        container: 'self-stretch',
+      },
+      false: {
+        container: 'self-center',
+      },
     },
   },
-
   defaultVariants: {
-    variant: 'default',
+    color: 'primary',
     size: 'default',
     disabled: false,
     fullWidth: true,
   },
 });
 
-// 이러면 tv 를 못쓰긴함
-// 1. variant 를 props 로 전부 전달
-//  - button 컴포넌트가 tv 와 결합도가 생김, props 를 자동으로 생성한다면 모를까?
-//    - tv 에서 변수가 추가될 떄마다 Button 컴포넌트도 생성해야 됨. 응집도가 떨어짐
-const Button = ({
+export default function Button({
   text,
-  variant,
+  isLoading,
+  color,
   size,
   disabled,
   fullWidth,
+  children,
   ...props
 }: {
   text: string;
-  variant?: 'default' | 'secondary' | 'outline' | 'destructive' | 'ghost' | 'link';
-  size?: 'default' | 'sm' | 'lg' | 'icon';
-  disabled?: boolean;
-  fullWidth?: boolean;
-} & PressableProps) => {
-  const { container, label } = button({ variant, size, disabled, fullWidth });
+  isLoading: boolean;
+  color: 'primary' | 'secondary' | 'destructive' | 'link';
+  size: 'default' | 'sm' | 'lg' | 'icon';
+  disabled: boolean;
+  fullWidth: boolean;
+  children?: React.ReactNode;
+} & PressableProps) {
+  const { container, label, indicator } = button({ color, size, disabled, fullWidth });
 
   return (
-    <Pressable className={container()} {...props}>
-      <Text className={label()}>{text}</Text>
+    <Pressable {...props} className={container()}>
+      {children ? (
+        children
+      ) : (
+        <>
+          {isLoading ? (
+            <ActivityIndicator className={indicator()} />
+          ) : (
+            <Text className={label()}>{text}</Text>
+          )}
+        </>
+      )}
     </Pressable>
   );
-};
-
-export default Button;
+}

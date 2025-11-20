@@ -1,11 +1,23 @@
 import { Env } from '@env';
+import Button from '@src/components/ui/button';
 import { useTheme } from '@src/lib/hooks';
 import { useLanguage } from '@src/lib/i18n/utils';
-import { Button } from '@twheo/ui';
+import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Text, View } from 'react-native';
+import { PixelRatio, Text, View } from 'react-native';
+
+const DebugNativeDPI = () => {
+  const scale = PixelRatio.get();
+
+  return (
+    <View style={{ padding: 20 }}>
+      <Text>Current Scale: {scale}x</Text>
+    </View>
+  );
+};
 
 function Index() {
+  const router = useRouter();
   const { t } = useTranslation();
   const { language, setLanguage } = useLanguage();
   const { theme, setTheme } = useTheme();
@@ -66,61 +78,15 @@ function Index() {
       <Text className='text-warning-500 dark:text-warning-500'>Warning Message</Text>
       <Text className='text-brand-primary-light dark:text-brand-primary-dark'>Brand Color</Text>
       <Button
-        isLoading={false}
-        color='primary'
-        size='default'
-        fullWidth={false}
-        disabled={false}
-        text='Common Button'
-      />
-      <Button
-        isLoading={false}
-        color='primary'
-        size='sm'
-        fullWidth={false}
-        disabled={false}
-        text='Small Button'
-      />
-      <Button
-        isLoading={false}
-        color='primary'
-        size='lg'
-        fullWidth={false}
-        disabled={false}
-        text='Large Button'
-      />
-      <Button
-        isLoading={false}
-        color='secondary'
-        size='default'
-        fullWidth={false}
-        disabled={false}
-        text='Secondary Button'
-      />
-      <Button
-        isLoading={false}
-        color='destructive'
-        size='default'
-        fullWidth={false}
-        disabled={false}
-        text='Destructive Button'
-      />
-      <Button
+        onPress={() => router.push('/button')}
+        text='Go to Button'
         isLoading={false}
         color='link'
         size='default'
-        fullWidth={true}
-        disabled={false}
-        text='Link Button'
-      />
-      <Button
-        isLoading={false}
-        color='primary'
-        size='icon'
         fullWidth={false}
         disabled={false}
-        text='ICON'
       />
+      <DebugNativeDPI />
     </View>
   );
 }

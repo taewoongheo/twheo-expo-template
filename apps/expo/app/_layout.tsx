@@ -1,8 +1,13 @@
 import '@twheo/i18n';
+import { Stack } from 'expo-router';
 import 'react-native-reanimated';
-import Index from '.';
 import '../global.css';
 
 export default function RootLayout() {
-  return <Index />;
+  return (
+    <Stack>
+      <Stack.Screen name='index' options={{ headerShown: false }} />
+      <Stack.Screen name='button' />
+    </Stack>
+  );
 }
