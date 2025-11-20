@@ -79,7 +79,7 @@ function Index() {
       <Text className='text-brand-primary-light dark:text-brand-primary-dark'>Brand Color</Text>
       <Button
         onPress={() => router.push('/button')}
-        text='Go to Button'
+        text='Go to Buttons'
         isLoading={false}
         color='link'
         size='default'

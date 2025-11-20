@@ -1,6 +1,7 @@
-import type { PressableProps } from 'react-native';
+import { useMemo } from 'react';
+import type { PressableProps, View } from 'react-native';
 import { ActivityIndicator, Pressable, Text } from 'react-native';
-import { tv } from 'tailwind-variants';
+import { tv, VariantProps } from 'tailwind-variants';
 
 const button = tv({
   slots: {
@@ -33,19 +34,16 @@ const button = tv({
     },
     size: {
       default: {
-        container: 'h-10 px-4',
-        label: 'text-base',
-      },
-      sm: {
-        container: 'h-8 px-3',
-        label: 'text-sm',
-      },
-      lg: {
-        container: 'h-12 px-8',
+        container: 'h-14 px-4',
         label: 'text-lg',
       },
-      icon: {
-        container: 'size-9',
+      sm: {
+        container: 'h-11 px-3',
+        label: 'text-base',
+      },
+      lg: {
+        container: 'h-16 px-8',
+        label: 'text-xl',
       },
     },
     disabled: {
@@ -70,36 +68,55 @@ const button = tv({
   },
 });
 
+type ButtonVariants = VariantProps<typeof button>;
+interface Props extends ButtonVariants, Omit<PressableProps, 'disabled'> {
+  text?: string;
+  isLoading?: boolean;
+  className?: string;
+  textClassName?: string;
+  ref?: React.Ref<View>;
+}
+
 export default function Button({
-  text,
-  isLoading,
-  color,
-  size,
-  disabled,
-  fullWidth,
-  children,
+  text = '',
+  isLoading = false,
+  className = '',
+  textClassName = '',
+  color = 'primary',
+  size = 'default',
+  disabled = false,
+  fullWidth = true,
+  testID,
+  ref,
   ...props
-}: {
-  text: string;
-  isLoading: boolean;
-  color: 'primary' | 'secondary' | 'destructive' | 'link';
-  size: 'default' | 'sm' | 'lg' | 'icon';
-  disabled: boolean;
-  fullWidth: boolean;
-  children?: React.ReactNode;
-} & PressableProps) {
-  const { container, label, indicator } = button({ color, size, disabled, fullWidth });
+}: Props) {
+  const styles = useMemo(
+    () => button({ color, size, disabled, fullWidth }),
+    [color, size, disabled, fullWidth]
+  );
 
   return (
-    <Pressable {...props} className={container()}>
-      {children ? (
-        children
+    <Pressable
+      {...props}
+      disabled={isLoading || disabled}
+      ref={ref}
+      testID={testID}
+      className={styles.container({ className })}
+    >
+      {props.children ? (
+        props.children
       ) : (
         <>
           {isLoading ? (
-            <ActivityIndicator className={indicator()} />
+            <ActivityIndicator
+              size='small'
+              testID={`${testID}-activity-indicator`}
+              className={styles.indicator()}
+            />
           ) : (
-            <Text className={label()}>{text}</Text>
+            <Text testID={`${testID}-text`} className={styles.label({ className: textClassName })}>
+              {text}
+            </Text>
           )}
         </>
       )}
