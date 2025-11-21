@@ -4,17 +4,7 @@ import { useTheme } from '@src/lib/hooks';
 import { useLanguage } from '@src/lib/i18n/utils';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { PixelRatio, Text, View } from 'react-native';
-
-const DebugNativeDPI = () => {
-  const scale = PixelRatio.get();
-
-  return (
-    <View style={{ padding: 20 }}>
-      <Text>Current Scale: {scale}x</Text>
-    </View>
-  );
-};
+import { Text, View } from 'react-native';
 
 function Index() {
   const router = useRouter();
@@ -86,7 +76,15 @@ function Index() {
         fullWidth={false}
         disabled={false}
       />
-      <DebugNativeDPI />
+      <Button
+        onPress={() => router.push('/image')}
+        text='Go to Image'
+        isLoading={false}
+        color='link'
+        size='default'
+        fullWidth={false}
+        disabled={false}
+      />
     </View>
   );
 }
