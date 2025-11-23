@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import { Control, FieldValues, Path, RegisterOptions, useController } from 'react-hook-form';
-import type { TextInput } from 'react-native';
+import type { BlurEvent, TextInput } from 'react-native';
 import { TextInput as NTextInput, Text, TextInputProps, View } from 'react-native';
 import { tv, VariantProps } from 'tailwind-variants';
 
@@ -45,14 +45,10 @@ interface InputProps extends Omit<InputVariants, 'error'>, TextInputProps {
   ref?: React.Ref<TextInput>;
 }
 
-function Input({ label, error, disabled, ...props }: InputProps) {
+function Input({ label, error, disabled, onBlur, ...props }: InputProps) {
   const [isFocused, setIsFocused] = useState(false);
-  const onBlur = useCallback(() => {
-    console.log('onBlur');
-    setIsFocused(false);
-  }, []);
-  const onFocus = useCallback(() => {
-    console.log('onFocus');
+
+  const handleFocus = useCallback(() => {
     setIsFocused(true);
   }, []);
 
@@ -61,10 +57,18 @@ function Input({ label, error, disabled, ...props }: InputProps) {
     [isFocused, error, disabled]
   );
 
+  const handleBlur = useCallback(
+    (e: BlurEvent) => {
+      setIsFocused(false);
+      onBlur?.(e);
+    },
+    [onBlur]
+  );
+
   return (
     <View className={styles.container()}>
       {label && <Text className={styles.label()}>{label}</Text>}
-      <NTextInput className={styles.input()} onBlur={onBlur} onFocus={onFocus} {...props} />
+      <NTextInput {...props} className={styles.input()} onFocus={handleFocus} onBlur={handleBlur} />
       {error && (
         <Text className='text-text-destructive-light dark:text-text-destructive-dark'>{error}</Text>
       )}
@@ -95,7 +99,7 @@ export default function ControlledInput<T extends FieldValues>({
       ref={field.ref}
       autoCapitalize='none'
       onChangeText={field.onChange}
-      // onBlur={field.onBlur}
+      onBlur={field.onBlur}
       value={(field.value as string) || ''}
       error={fieldState.error?.message}
       {...props}
