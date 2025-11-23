@@ -1,16 +1,29 @@
+import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@src/components/ui';
 import ControlledInput from '@src/components/ui/input';
 import { useForm } from 'react-hook-form';
 import { Text, View } from 'react-native';
+import { z } from 'zod';
 
-interface FormValues {
-  name: string;
-  email: string;
-  password: string;
-}
+const schema = z.object({
+  name: z.string().min(1, 'Name is required').max(50, 'Name must be less than 50 characters'),
+  email: z
+    .string()
+    .email({ message: 'Invalid email format' })
+    .min(1, 'Email is required')
+    .max(255, 'Email must be less than 255 characters'),
+  password: z
+    .string()
+    .min(1, 'Password is required')
+    .max(50, 'Password must be less than 50 characters'),
+});
+
+type FormValues = z.infer<typeof schema>;
 
 export default function Form() {
   const { control, handleSubmit } = useForm<FormValues>({
+    mode: 'onBlur',
+    resolver: zodResolver(schema),
     defaultValues: {
       name: '',
       email: '',
