@@ -85,6 +85,15 @@ function Index() {
         fullWidth={false}
         disabled={false}
       />
+      <Button
+        onPress={() => router.push('/form')}
+        text='Go to Form'
+        isLoading={false}
+        color='link'
+        size='default'
+        fullWidth={false}
+        disabled={false}
+      />
     </View>
   );
 }

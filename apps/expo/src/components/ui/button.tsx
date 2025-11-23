@@ -34,15 +34,15 @@ const button = tv({
     },
     size: {
       default: {
-        container: 'h-14 px-4',
+        container: 'h-12 px-4',
         label: 'text-lg',
       },
       sm: {
-        container: 'h-11 px-3',
+        container: 'h-10 px-3',
         label: 'text-base',
       },
       lg: {
-        container: 'h-16 px-8',
+        container: 'h-14 px-8',
         label: 'text-xl',
       },
     },
